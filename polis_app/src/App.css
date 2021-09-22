@@ -1,3 +1,7 @@
+body{
+  background-color: aquamarine;
+}
+
 .App {
   text-align: center;
 }
@@ -15,13 +19,26 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  background-image: url(./Img/polis.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 120px;
+  
+}
+
+.event-info{
+    margin-top: '40px';
+    height:'160px';
+    width: '100%';
+    background-color:'#282c34';
+    color:'white'
 }
 
 .App-link {

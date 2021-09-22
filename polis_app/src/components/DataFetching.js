@@ -28,11 +28,11 @@ function DataFetching() {
     }, [])
 
   return(
-    <div>
+    <div class="event-item">
         {events.map(event =>(
-          <div key={event.id} style={{ marginTop: '60px',height:'120px', width: '100%', backgroundColor:'black', color:'white' }}>
-          <span>{event.name}<ColoredLine color="black" /><br /><br /></span>
-          <span>{event.summary}</span>
+          <div key={event.id} style={{ marginTop: '40px',height:'160px', width: '100%', backgroundColor:'#282c34', color:'white' }}>
+          <span class="event-title"><h3>{event.name}</h3><br /></span>
+          <span class="event-summary"><p>{event.summary}</p></span>
           </div>
         ))}
     </div>
