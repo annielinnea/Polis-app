@@ -46,15 +46,15 @@ function DataFetching() {
                   {event.name.split(',').slice(1)}                 
                 </a>
               </p>
-              <sub>
+              <p className="event-date">
                 {event.datetime}
-              </sub>
+              </p>
                 <br />
             </span>
             <span className="event-summary">
-              <sub>
+              <p>
                 {event.summary}
-              </sub>
+              </p>
             </span>
           </div>
           ))

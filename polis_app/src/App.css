@@ -29,6 +29,11 @@ body{
   height: 60px;
   }
 
+#NavTitle{
+  font-size: 15px;
+  text-shadow: black 5px;
+}
+
 .PostItems{
   text-align: start;
 
@@ -77,9 +82,16 @@ a:hover{
   font-family: Roboto;
 }
 
+.event-date{
+  font-size: 12px;
+  margin: 0;
+}
+
+
 .event-summary{
   font-family: Lato;
-
+  font-size: 12px;
+  margin: 0;
 }
 
 .event-item{
@@ -102,12 +114,12 @@ a:hover{
 }
 
 .postImg{
+  filter: blur(1.5px);
   float: right;
   position: ;
   width: 120px;
   height: 100%;
-  z-index: -10;
-  border-color: black;
+  border:none
 }
 
 

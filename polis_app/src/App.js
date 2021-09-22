@@ -11,7 +11,7 @@ function App() {
 
     <div className="navbarTop">
       <nav>
-        <h2>CrimeWatch </h2>
+        <h2 id="NavTitle">Brottsbevakning </h2>
         
       </nav>
     </div>
