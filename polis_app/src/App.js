@@ -1,16 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import DataFetching from './components/DataFetching';
+import SearchFunction from './components/SearchFunction';
+
+
 
 function App() {
   return (
-    <div className="App">
-      
-      <header className="App-header">
-        <h2>CrimeWatch</h2>
-      </header>
-      <DataFetching />
+    <React.Fragment>
+
+    <div className="navbarTop">
+      <nav>
+        <h2>CrimeWatch </h2>
+        
+      </nav>
     </div>
+    <div className="App">
+      <header className="App-header">
+
+      </header>
+
+      <div className="PostItems">
+        <DataFetching />
+      </div>
+    </div>
+    </React.Fragment>
   );
 }
 

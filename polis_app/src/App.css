@@ -1,6 +1,116 @@
 body{
-  background-color: aquamarine;
+  -webkit-text-stroke: 0.1px black;
+  font-family: Roboto;
+  background-color: #485665;
 }
+
+
+.SearchBar{
+  background: #231F20;
+  caret-color: azure;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 5px;
+
+  margin-bottom: 10px;
+  margin-top: 45px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  vertical-align: middle;
+  width:  300px;
+}
+
+.navbarTop{
+  background-color:  #222;
+  vertical-align: top;
+  color:white;
+  height: 60px;
+  }
+
+.PostItems{
+  text-align: start;
+
+  
+}
+
+.postImg{
+  background-image: url(./components/Img/stockImg.jpg);
+  background-size: cover;
+}
+
+/* this might make problems later */
+h2{ 
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+
+}
+
+a:link, :visited {
+  -webkit-text-stroke: 0.1px black;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover{
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./components/Font/Roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(./components/Font/Lato/Lato-Light.ttf);
+}
+
+
+
+.event-title{
+  font-family: Roboto;
+}
+
+.event-summary{
+  font-family: Lato;
+
+}
+
+.event-item{
+  background-color:  #222;
+  color: white;
+
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  border-radius: 20px;
+
+  padding-left: 20px;
+  
+  height: 150px;
+
+  z-index: 2;
+
+}
+
+.postImg{
+  float: right;
+  position: ;
+  width: 120px;
+  height: 100%;
+  z-index: -10;
+  border-color: black;
+}
+
+
 
 .App {
   text-align: center;
@@ -19,7 +129,7 @@ body{
 
 .App-header {
   background-color: #282c34;
-  background-image: url(./Img/polis.png);
+  background-image: url(./components//Img/polis.png);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 40vh;
@@ -29,7 +139,6 @@ body{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  margin-bottom: 120px;
   
 }
 

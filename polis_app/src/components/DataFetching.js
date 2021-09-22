@@ -1,49 +1,67 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-//import background from '/home/itsimo/api-testing/src/components/Img/images.jpg'
+import '../App.css';
 
-const ColoredLine = ({ color }) => (
-    <hr
-        style={{
-            color: color,
-            backgroundColor: color,
-            height: 5
-        }}
-    />
-);
+import stockImg from "./Img/stockImg.jpg"
+
+
+const URL = "https://polisen.se/api/events?";
+const APIcat = "locationname"
 
 function DataFetching() {
   const [events, setEvents] = useState([])
-  const [pos, setPos] = useState(1)
+  const [pos, setPos] = useState([])
+
+
 
   useEffect(() => {
     axios
-      .get(`https://polisen.se/api/events?locationname=${pos}`)
+      .get(`${URL}${APIcat}=${pos}`)
       .then(res => {
         console.log("this is res", res.data)
         setEvents(res.data)
         console.log("post data", events)
+
+
       })
       .catch(err => {
         console.log("ERROR", err)
       })
     }, [pos])
 
+    
+
   return(
-    <div class="event-item">
-      <div>
-         <input type="text" value={pos} onChange={e => setPos(e.target.value)}/>
-        {events.map(event =>(
-          <div key={event.id} style={{ marginTop: '40px',height:'160px', width: '100%', backgroundColor:'#282c34', color:'white' }}>
-          <span class="event-title"><h3>{event.name}</h3><br /></span>
-          <span class="event-summary"><p>{event.summary}</p></span>
+    <div >
+      <center>
+        <input placeholder="Enter location...  &#9740;" className="SearchBar" type="text" value={pos} onChange={e => setPos(e.target.value)} />
+      </center>
+      <div className="event-items">
+          {events.map(event =>(
+          <div key={event.id} className="event-item">
+              <img class="postImg"></img>
+            <span className="event-title">
+              <p id="postTitle">
+                <a href={"https://polisen.se/" +event.url}>
+                  {event.name.split(',').slice(1)}                 
+                </a>
+              </p>
+              <sub>
+                {event.datetime}
+              </sub>
+                <br />
+            </span>
+            <span className="event-summary">
+              <sub>
+                {event.summary}
+              </sub>
+            </span>
           </div>
-        ))}
+          ))
+          }
       </div>
     </div>
-
   )
-
 }
 
 export default DataFetching
