@@ -14,9 +14,11 @@ const ColoredLine = ({ color }) => (
 
 function DataFetching() {
   const [events, setEvents] = useState([])
+  const [pos, setPos] = useState(1)
 
   useEffect(() => {
-    axios.get('https://polisen.se/api/events')
+    axios
+      .get(`https://polisen.se/api/events?locationname=${pos}`)
       .then(res => {
         console.log("this is res", res.data)
         setEvents(res.data)
@@ -25,16 +27,19 @@ function DataFetching() {
       .catch(err => {
         console.log("ERROR", err)
       })
-    }, [])
+    }, [pos])
 
   return(
     <div class="event-item">
+      <div>
+         <input type="text" value={pos} onChange={e => setPos(e.target.value)}/>
         {events.map(event =>(
           <div key={event.id} style={{ marginTop: '40px',height:'160px', width: '100%', backgroundColor:'#282c34', color:'white' }}>
           <span class="event-title"><h3>{event.name}</h3><br /></span>
           <span class="event-summary"><p>{event.summary}</p></span>
           </div>
         ))}
+      </div>
     </div>
 
   )
