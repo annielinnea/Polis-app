@@ -2,19 +2,15 @@ import React from 'react';
 import './App.css';
 import DataFetching from './components/DataFetching';
 import SearchFunction from './components/SearchFunction';
-
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <React.Fragment>
 
-    <div className="navbarTop">
-      <nav>
-        <h2 id="NavTitle">Brottsbevakning </h2>
-        
-      </nav>
-    </div>
+    
     <div className="App">
+      <Navbar />
       <header className="App-header">
       </header>
 
