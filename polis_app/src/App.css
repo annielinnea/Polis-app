@@ -60,11 +60,6 @@ a:link, :visited {
   text-decoration: none;
 }
 
-a:hover{
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
 
 @font-face {
   font-family: Roboto;
@@ -116,7 +111,6 @@ a:hover{
 .postImg{
   filter: blur(1.5px);
   float: right;
-  position: ;
   width: 120px;
   height: 100%;
   border:none
