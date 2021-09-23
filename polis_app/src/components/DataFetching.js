@@ -30,6 +30,21 @@ function DataFetching() {
       })
     }, [pos])
 
+  // useEffect(() => {
+  //   axios
+  //     .get(`${URL}${APIcat}=${pos}`)
+  //     .then(res => {
+  //       console.log("this is res", res.data)
+  //       setEvents(res.data)
+  //       console.log("post data", events)
+
+
+  //     })
+  //     .catch(err => {
+  //       console.log("ERROR", err)
+  //     })
+  //   }, [pos])
+
   
 
   return(
@@ -43,22 +58,18 @@ function DataFetching() {
           {events.map(event =>(
           <div key={event.id} className="event-item">
               <img class="postImg"></img>
-            <span className="event-title">
-              <p id="postTitle">
-                <a href={"https://polisen.se/" +event.url}>
-                  {event.name.split(',').slice(1)}             
-                </a>
-              </p>
-              <p className="event-date">
-                {event.datetime}
-              </p>
+            <p className="event-title">
+              <a href={"https://polisen.se/" +event.url}>
+                {event.name.split(',').slice(1)}             
+              </a>
+            </p>
+            <p className="event-date">
+              {event.datetime}
+            </p>
                 <br />
-            </span>
-            <span className="event-summary">
-              <p>
-                {event.summary}
-              </p>
-            </span>
+            <p className="event-summary">
+              {event.summary}
+            </p>
           </div>
           ))
           }
