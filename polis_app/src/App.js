@@ -4,7 +4,6 @@ import DataFetching from './components/DataFetching';
 import SearchFunction from './components/SearchFunction';
 
 
-
 function App() {
   return (
     <React.Fragment>
@@ -17,7 +16,6 @@ function App() {
     </div>
     <div className="App">
       <header className="App-header">
-
       </header>
 
       <div className="PostItems">

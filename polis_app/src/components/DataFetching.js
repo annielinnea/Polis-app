@@ -6,7 +6,8 @@ import stockImg from "./Img/stockImg.jpg"
 
 
 const URL = "https://polisen.se/api/events?";
-const APIcat = "locationname"
+const APItype = "type";
+const APIcat = "locationname";
 
 function DataFetching() {
   const [events, setEvents] = useState([])
@@ -29,13 +30,15 @@ function DataFetching() {
       })
     }, [pos])
 
-    
+  
 
   return(
     <div >
       <center>
-        <input placeholder="Enter location...  &#9740;" className="SearchBar" type="text" value={pos} onChange={e => setPos(e.target.value)} />
+        <input placeholder="Enter location...  &#9740;" id="Search" className="SearchBar" type="text" value={pos} onChange={e => setPos(e.target.value)} />
+
       </center>
+
       <div className="event-items">
           {events.map(event =>(
           <div key={event.id} className="event-item">
@@ -43,7 +46,7 @@ function DataFetching() {
             <span className="event-title">
               <p id="postTitle">
                 <a href={"https://polisen.se/" +event.url}>
-                  {event.name.split(',').slice(1)}                 
+                  {event.name.split(',').slice(1)}             
                 </a>
               </p>
               <p className="event-date">
