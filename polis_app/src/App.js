@@ -14,12 +14,8 @@ function App() {
     
     <div className="App">
       <Navbar />
-<<<<<<< Updated upstream
-+      <header className="App-header">
-=======
       <header>
         <Slideshow />
->>>>>>> Stashed changes
       </header>
 
       <div className="PostItems">
