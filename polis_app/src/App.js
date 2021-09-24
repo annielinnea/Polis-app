@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './components/Gps/gps.jsx';
 import DataFetching from './components/DataFetching';
 import SearchFunction from './components/SearchFunction';
 import Navbar from "./components/Navbar/Navbar";
