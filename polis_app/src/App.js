@@ -11,7 +11,7 @@ function App() {
     
     <div className="App">
       <Navbar />
-      <header className="App-header">
++      <header className="App-header">
       </header>
 
       <div className="PostItems">
