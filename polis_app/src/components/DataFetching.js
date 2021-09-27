@@ -10,6 +10,40 @@ const objects = {
 }
 
 
+function checkBox(){
+  const checkboxList = [{ 
+      "checkBoxes":[ {
+          Cname: "Alkohollagen",
+          value: false
+      },
+      {
+          Cname: "Anträffad död",
+          value: false
+      },
+      {
+          Cname: "Anträffat gods",
+          value: false
+      },
+      {
+          Cname: "Arbetsplatsolycka",
+          value: false
+      }
+  ]}]
+
+  return(
+      <form >
+            {checkboxList.map(chechbox =>(
+              <React.Fragment>
+              <input type="checkbox" />
+              <label for="vehicle1">"HELLOO"</label>    
+              </React.Fragment>
+            ))
+            }
+      </form>
+    )
+
+}
+
 function DataFetching() {
   const [events, setEvents] = useState([])
   // const query = {}
@@ -72,7 +106,7 @@ function DataFetching() {
       </center>
 
       <div className="event-items">
-          {events.map(event =>(
+          {events.map(event =>( 
           <div key={event.id} className="event-item">
               <img class="postImg"></img>
             <p className="event-title">

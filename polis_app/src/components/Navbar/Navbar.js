@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {MenuItems} from "./MenuItems"
 import {Button} from "../Button"
 import './Navbar.css'
+import checkBox from "./Filter";
 
 class Navbar extends Component {
     state = {clicked: false}
@@ -21,12 +22,16 @@ class Navbar extends Component {
                     {MenuItems.map((item, index) => {
                         return (
                             <li key={index}>
+                                <filter />
                                 <a className={item.cName} href={item.url}>
                                 {item.title}
                                 </a>
                             </li> 
                         )
                     })}
+                    <li>
+                    {checkBox()}
+                    </li>
                 </ul>
                 <Button>Registrera</Button>
             </nav>

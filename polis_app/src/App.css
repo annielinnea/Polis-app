@@ -4,7 +4,7 @@ body{
   background-color: #485665;
 }
 
-
+/* Searchbar properties */
 .SearchBar{
   background: #231F20;
   caret-color: azure;
@@ -22,24 +22,10 @@ body{
   width:  300px;
 }
 
-.navbarTop{
-  background-color:  #222;
-  vertical-align: top;
-  color:white;
-  height: 60px;
-  }
-
-#NavTitle{
-  font-size: 15px;
-  text-shadow: black 5px;
-}
-
-
 
 .PostItems{
   text-align: start;
 
-  
 }
 
 .postImg{
@@ -74,17 +60,19 @@ a:link, :visited {
 }
 
 
-
+/* Title of event in items */
 .event-title{
   font-size: 15px;
   font-family: Roboto;
 }
 
+/* Date of event in items */
 .event-date{
   font-size: 12px;
   margin: 0;
 }
 
+/* summary of event in items */
 
 .event-summary{
   font-family: Lato;
@@ -92,6 +80,7 @@ a:link, :visited {
   margin: 0;
 }
 
+/* This is properties for the items */
 .event-item{
   background-color:  #222;
   color: white;
@@ -101,13 +90,14 @@ a:link, :visited {
   margin-left: 15px;
   margin-right: 15px;
 
-  border-radius: 20px;
-
+  border-radius: 15px;
+  box-shadow: 10px 12px 0px 0px #1D617A;
   padding-left: 20px;
   
   height: 100px;
 }
 
+/* properties for Img in items */
 .postImg{
   filter: blur(1.5px);
   float: right;

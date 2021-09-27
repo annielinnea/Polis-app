@@ -26,7 +26,7 @@
     list-style: none;
     text-align: center;
     width: 70vw;
-    justify-content: end;
+    /* justify-content: end; dont see the point of this */
     margin-right: 2rem;
 }
 
@@ -63,9 +63,9 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 500px;
+        height: 800px;
         position: absolute;
-        top: 80px;
+        top: -20px;
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -101,6 +101,7 @@
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
+        z-index: 3;
     }
     .fa-times {
         color: #fff;
