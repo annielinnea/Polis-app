@@ -74,7 +74,7 @@ function DataFetching() {
       <div className="event-items">
           {events.map(event =>(
           <div key={event.id} className="event-item">
-              <img class="postImg"></img>
+              <img class="postImg" alt="Polis Scene"></img>
             <p className="event-title">
               <a href={"https://polisen.se/" +event.url}>
                 {event.name.split(',').slice(1)}             
