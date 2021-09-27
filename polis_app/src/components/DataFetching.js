@@ -9,48 +9,13 @@ const objects = {
   APItype: "typename"
 }
 
-
-function checkBox(){
-  const checkboxList = [{ 
-      "checkBoxes":[ {
-          Cname: "Alkohollagen",
-          value: false
-      },
-      {
-          Cname: "Anträffad död",
-          value: false
-      },
-      {
-          Cname: "Anträffat gods",
-          value: false
-      },
-      {
-          Cname: "Arbetsplatsolycka",
-          value: false
-      }
-  ]}]
-
-  return(
-      <form >
-            {checkboxList.map(chechbox =>(
-              <React.Fragment>
-              <input type="checkbox" />
-              <label for="vehicle1">"HELLOO"</label>    
-              </React.Fragment>
-            ))
-            }
-      </form>
-    )
-
-}
-
 function DataFetching() {
   const [events, setEvents] = useState([])
-  // const query = {}
+  // input for url
   const [input, setInput] = useState([])
 
 
-
+  //Fetches API directly
   useEffect( () =>
     fetch(`${objects.URL}${objects.APIlocation}=${input}`)
       .then((response) => {

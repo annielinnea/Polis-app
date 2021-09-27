@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+
+// Might make this too JSON
 let checkboxList = [{
     Cname: "Alkohollagen",
     value: false
@@ -18,15 +20,14 @@ let checkboxList = [{
 ]
 
 function checkBox(){
-
-    
-
+    //create chckbox for each item in checkboxList
     return(
         <form class="checkList">
               {checkboxList.map(checkbox =>(
                 <React.Fragment>
                 <li>
             <input value={checkbox.value} type="checkbox" onClick ={() => {
+                //true or false value
                 checkbox.value = !checkbox.value
             }} 
                 />
