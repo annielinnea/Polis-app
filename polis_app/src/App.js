@@ -4,6 +4,8 @@ import './components/Gps/gps.jsx';
 import DataFetching from './components/DataFetching';
 import SearchFunction from './components/SearchFunction';
 import Navbar from "./components/Navbar/Navbar";
+import './components/SlideShow'
+import Slideshow from './components/SlideShow';
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
     
     <div className="App">
       <Navbar />
-      <header className="App-header">
+      <header>
+        <Slideshow />
       </header>
 
       <div className="PostItems">
