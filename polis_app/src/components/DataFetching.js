@@ -2,12 +2,52 @@ import React, {useState, useEffect} from 'react'
 // import axios from 'axios'
 import '../App.css';
 
+//CategoryList
+const {checkboxList} = require('./Navbar/Filter');
 
+
+console.log("A test: ", checkboxList)
+
+console.log("APIlengts: ", checkboxList.length)
+
+
+//Constant objects 
 const objects = {
   URL: "https://polisen.se/api/events?",
   APIlocation : "locationname",
   APItype: "typename"
 }
+
+// //Takes checkboxList and filters api
+// function filter(api) {
+//   let trueCheck = [{}]
+
+//   if (checkboxList.values == true) {
+//     trueCheck.push(check);
+//   }
+
+//   // for (let d = 0;checkboxList.length; d++){
+//   //   if (checkboxList.values == true){
+//   //     trueCheck.push(check);
+//   //   }
+//   // }
+
+//   // console.log("trueCheck",trueCheck)
+
+//   // for (let i = 0; i > checkboxList.length; i++) {
+//   //   for (let g = 0; g == api.length; g++) {
+//   //     if (checkboxList[i].Cname != api[g].type) {
+//   //       console.log("APIsplice: ", api[g].type)
+//   //       api = api.splice(g, -1)
+//   //     }
+//   //   }
+//   // }
+
+    
+  
+//   return api
+// }
+
 
 function DataFetching() {
   const [events, setEvents] = useState([])
@@ -15,7 +55,7 @@ function DataFetching() {
   const [input, setInput] = useState([])
 
 
-  //Fetches API directly
+  //Fetches API directly from polise
   useEffect( () =>
     fetch(`${objects.URL}${objects.APIlocation}=${input}`)
       .then((response) => {
@@ -25,45 +65,23 @@ function DataFetching() {
         response.text().then((data) =>{
           let api = JSON.parse(data)
           console.log("Checkpoint A.2: Status OK" )
+          //API Filter
+          // api = api.filter(filter)
+          console.log("Controll: ",api)
+
           setEvents(api)
         }, (err) => {
           console.log("ERROR", err)
         });
       }), [input])
     
-
-  console.log("Checkpoint B: ", events[0])
-
-
-      //Old guide, I have now overcome it
-  // useEffect(() => {
-  //   axios
-  //     .get(`${URL}${APIcat}=${pos}`)
-  //     .then(res => {
-  //       console.log("this is res", res.data)
-  //       setEvents(res.data)
-  //       console.log("post data", events)
+  console.log("A test: ", checkboxList)
+  //Filters Search
 
 
-  //     })
-  //     .catch(err => {
-  //       console.log("ERROR", err)
-  //     })
-  //   }, [pos])
-
-  // for (let i = 0; i < events.length; i++) {
-  //   if (events[i].type === input) {
-  //     // Add item to it
-  //     query.push({ value: events[i] });
-
-  //     // Set state
-  //     this.setState({ query });
-      
-  //   }else if( i <= events.length){
-  //   console.log("QueryLog: ", query)}
-  // }
 
 
+//creates items/posts of event with properties
   return(
     <div >
       <center>
