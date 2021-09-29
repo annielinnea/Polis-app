@@ -1,0 +1,25 @@
+{
+    "queryList" : {
+        "Alkohollagen" : false,
+        "Anträffad död " : false,
+        "Anträffat gods" : false,
+        "Arbetsplatsolycka" : false,
+        "Bedrägeri" : false,
+        "Bombhot" : false,
+        "Brand" : false,
+        "Brand automatlarm" : false,
+        "Bråk" : false,
+        "Detonation" : false,
+        "Djur skadat/omhändertaget" : false,
+        "Ekobrott" : false,
+        "Försvunnen person" : false,
+        "Inbrott" : false,
+        "Knivlagen" : false,
+        "Misshandel" : false,
+        "Mord/dråp" : false,
+        "Rån" : false,
+        "Stöld" : false,
+        "Trafikolycka" : false,
+        "Vapenlagen" : false
+    }
+}
