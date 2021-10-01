@@ -39,7 +39,6 @@ body{
 a:link, :visited {
   -webkit-text-stroke: 0.1px black;
   color: white;
-  background-color: transparent;
   text-decoration: none;
 }
 
