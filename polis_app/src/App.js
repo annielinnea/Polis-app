@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './components/Gps/gps.jsx';
 import Navbar from "./components/Navbar/Navbar";
-import Slider from './components/Slider';
+import Slider from './components/Slider/Slider';
 import EventCard from './eventCard/eventCard'
 
 

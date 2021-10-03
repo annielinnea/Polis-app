@@ -3,8 +3,8 @@
 import styled from '@emotion/styled';
 import { css, jsx } from '@emotion/react'
 import React, { memo } from 'react'
-import leftArrow from '../img/left-arrow.svg'
-import rightArrow from '../img/right-arrow.svg'
+import leftArrow from '../Img/left-arrow.svg'
+import rightArrow from '../Img/right-arrow.svg'
 
 const Arrow = ({ direction, handleClick }) => {
   return (

@@ -1,6 +1,7 @@
 .NavbarItems {
-    background: #485665;
-    height: 80px;
+    background-color: #1e2b38;
+    background-image:url('../Img/topography.svg');
+      height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;

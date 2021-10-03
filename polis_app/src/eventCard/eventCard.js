@@ -1,4 +1,3 @@
-import DataFetching from "../components/DataFetching";
 import React from 'react'
 import globalValues from '../globalValues'
 import { checkboxList, categoryName } from '../components/Navbar/Checkbox'
@@ -77,7 +76,7 @@ class EventCard extends React.Component {
           <ui>
             {/* //creates cards with map() */}
             {this.state.events.filter(event => event.type.includes(categoryName)).map(event => (
-              <ol>
+              <ol className="eventOL">
                 <div
                   key={event.id}
                   className="event-item"
