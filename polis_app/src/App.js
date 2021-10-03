@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
 import './components/Gps/gps.jsx';
-import DataFetching from './components/DataFetching';
 import Navbar from "./components/Navbar/Navbar";
 import Slider from './components/Slider';
+import EventCard from './eventCard/eventCard'
+
 
 
 
@@ -18,129 +19,20 @@ function App() {
   return (
     <React.Fragment>
 
-    
-    <div className="App">
 
-      <Navbar />
-      <header>
-      <Slider slides={images} autoPlay={2}/>
+      <div className="App">
 
-      </header>
-      <div className="PostItems">
-        
-        <DataFetching />
+        <Navbar />
+        <header>
+          <Slider slides={images} autoPlay={2} />
 
+        </header>
+        <div className="PostItems">
 
+          <EventCard />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+        </div>
       </div>
-    </div>
     </React.Fragment>
   );
 }
