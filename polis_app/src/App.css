@@ -1,15 +1,16 @@
 body{
   -webkit-text-stroke: 0.1px black;
   font-family: Roboto;
-  background-color: #485665;
+  background-color: #1e2b38;
+  background-image:url('./components/Img/topography.svg');
 }
 
 /* Searchbar properties */
 .SearchBar{
-  background: #231F20;
-  caret-color: azure;
+  background-color: #353535;
+  caret-color: black;
   color: white;
-  border: 2px solid white;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
   padding: 10px 5px;
 
@@ -19,9 +20,13 @@ body{
   margin-right: 5px;
 
   vertical-align: middle;
-  width:  300px;
+  width:  80%;
 }
 
+.eventOL{
+  margin: 0;
+  padding: 0;
+}
 
 .PostItems{
   text-align: start;
@@ -32,9 +37,6 @@ body{
   background-image: url(./components/Img/stockImg.jpg);
   background-size: cover;
 }
-
-/* this might make problems later */
-
 
 a:link, :visited {
   -webkit-text-stroke: 0.1px black;
@@ -84,12 +86,15 @@ a:link, :visited {
   margin-left: 15px;
   margin-right: 15px;
 
-  border-radius: 20px;
-  box-shadow: 10px 5px 5px yellow;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+
+  /* //Why the fuck was this yellow btw? */
+  box-shadow: 10px 5px rgb(0, 0, 0);
   padding-left: 20px;
   padding-top: 1px;
   padding-bottom: 1px;
-  height: 120px;
+  height: 100px;
 }
 
 /* properties for Img in items */

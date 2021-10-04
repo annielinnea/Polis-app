@@ -141,6 +141,25 @@ const getWidth = () => window.innerWidth
       translate: getWidth()
     })
   }
+  /// TESTING FOR SLIDER !!!!
+  let cardinfo
+  let cardTitle
+  useEffect(() => {
+      //fetchesInputURL based on input
+      fetch(`https://polisen.se/api/events`)
+        .then((response) => {
+          response.text().then((data) => {
+            cardinfo = JSON.parse(data)
+            cardTitle = cardinfo.name
+            console.log("dawdaw ",cardinfo[1].name)
+          }, (err) => {
+            console.log("ERROR", err)
+          });
+        })
+    }, [])
+
+///
+
 
   return (
     <div css={SliderCSS} ref={sliderRef}>
@@ -150,7 +169,7 @@ const getWidth = () => window.innerWidth
         width={getWidth() * _slides.length}
       >
         {_slides.map((_slide, i) => (
-          <Slide width={getWidth()} key={_slide + i} content={_slide} />
+          <Slide width={getWidth()} key={_slide + i} content={_slide} title={cardTitle} />
         ))}
       </SliderContent>
 

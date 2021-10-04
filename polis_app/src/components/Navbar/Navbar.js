@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems"
-import { Button } from "../Button"
+import { Button } from "../Slider/Button"
 import './Navbar.css'
-import checkBox from "./Filter";
+import checkBox from "./Checkbox";
 
 class Navbar extends Component {
-    state = {clicked: false}
+    state = { clicked: false }
 
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
     }
 
-    render () {
-        return(
+    render() {
+        return (
             <nav className="NavbarItems">
                 <h1 className="navbar-logo">Polisen<i className="fab fa-react"></i></h1>
                 <div className="menu-icon" onClick={this.handleClick}>
@@ -24,13 +24,13 @@ class Navbar extends Component {
                             <li key={index}>
                                 <filter />
                                 <a className={item.cName} href={item.url}>
-                                {item.title}
+                                    {item.title}
                                 </a>
-                            </li> 
+                            </li>
                         )
                     })}
                     <li>
-                    {checkBox()}
+                        {checkBox()}
                     </li>
                 </ul>
                 <Button>Registrera</Button>
@@ -39,4 +39,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar 
+export default Navbar
