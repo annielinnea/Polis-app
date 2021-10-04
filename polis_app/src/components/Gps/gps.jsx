@@ -1,28 +1,37 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import { getDistance } from 'geolib';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
 
-  componentDidMount() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        console.log("Latitude is :", position.coords.latitude);
-        console.log("Longitude is :", position.coords.longitude);
-      });
-    }
-  }
 
-  render() {
-    return (
-      <div>
-       
-      </div>
-    );
-  }
+//Get users current position//
+var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  var crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`); 
 }
 
-render(<App />, document.getElementById("root"));
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+
+//Calculate distance between two coordinates//
+function calculateDistance(pos) {
+
+    var crd = pos.coords;
+    var dis = getDistance(
+      { latitude: crd.latitude, longitude: crd.longitude},
+      { latitude: 56.0045345, longitude: 12.3231 }
+    );
+    console.log(`Distance\n\n${dis / 1000} KM`);
+  };
+
+navigator.geolocation.getCurrentPosition(calculateDistance, success, error,  options);
