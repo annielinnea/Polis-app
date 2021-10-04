@@ -176,7 +176,7 @@ console.log("dawdaw ", cardinfo)
         width={getWidth() * _slides.length}
       >
         {_slides.map((_slide, i) => (
-          <Slide width={getWidth()} key={_slide + i} content={_slide} title={cardinfo.name} date={cardinfo.datetime} summary={cardinfo.summary} ap={cardinfo.url} />
+          <Slide width={getWidth()} key={_slide + i} content={_slide} title={cardinfo.name} date={cardinfo.datetime} summary={cardinfo.summary} url={cardinfo.url} />
         ))}
       </SliderContent>
 

@@ -22,7 +22,7 @@ const Slide = ({ content, width, title, date, summary, url }) => {
         background-position: center;
       `}
     >
-      <a href={url}>
+      <a href={"https://polisen.se/" + url}>
       <div className="sliderEvent">
         <ol>
           <ui>
