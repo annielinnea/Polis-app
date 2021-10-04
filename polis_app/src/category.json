@@ -1,0 +1,88 @@
+{
+  "list": [
+    {
+      "Cname": "Alkohollagen",
+      "value": false
+    },
+    {
+      "name": "Anträffad död",
+      "value": false
+    },
+    {
+      "Cname": "Anträffat gods",
+      "value": false
+    },
+    {
+      "Cname": "Arbetsplatsolycka",
+      "value": false
+    },
+    {
+      "Cname": "Bedrägeri",
+      "value": false
+    },
+    {
+      "Cname": "Bombhot",
+      "value": false
+    },
+    {
+      "Cname": "Brand",
+      "value": false
+    },
+    {
+      "Cname": "Brand automatlarm",
+      "value": false
+    },
+    {
+      "Cname": "Bråk",
+      "value": false
+    },
+    {
+      "Cname": "Detonation",
+      "value": false
+    },
+    {
+      "Cname": "Djur skadat/omhändertaget",
+      "value": false
+    },
+    {
+      "Cname": "Ekobrott",
+      "value": false
+    },
+    {
+      "Cname": "Försvunnen person",
+      "value": false
+    },
+    {
+      "Cname": "Inbrott",
+      "value": false
+    },
+    {
+      "Cname": "Knivlagen",
+      "value": false
+    },
+    {
+      "Cname": "Misshandel",
+      "value": false
+    },
+    {
+      "Cname": "Mord/dråp",
+      "value": false
+    },
+    {
+      "Cname": "Rån",
+      "value": false
+    },
+    {
+      "Cname": "Stöld",
+      "value": false
+    },
+    {
+      "Cname": "Trafikolycka",
+      "value": false
+    },
+    {
+      "Cname": "Vapenlagen",
+      "value": false
+    }
+  ]
+}
