@@ -24,7 +24,7 @@ function App() {
 
         <Navbar />
         <header>
-          <Slider slides={images} autoPlay={2} />
+          <Slider slides={images} autoPlay={5} />
 
         </header>
         <div className="PostItems">

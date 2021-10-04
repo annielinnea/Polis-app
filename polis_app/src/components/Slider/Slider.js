@@ -10,6 +10,8 @@ import Dots from './Dots'
 
 const getWidth = () => window.innerWidth
 
+let cardinfo = []
+
 /**
  * @function Slider
  */
@@ -41,6 +43,9 @@ const getWidth = () => window.innerWidth
     transitionRef.current = smoothTransition
     resizeRef.current = handleResize
     throttleRef.current = throttleArrows
+
+
+
   })
 
   useEffect(() => {
@@ -92,7 +97,25 @@ const getWidth = () => window.innerWidth
   }, [activeSlide])
 
   useEffect(() => {
-    if (transition === 0) setState({ ...state, transition: 0.45, transitioning: false })
+    if (transition === 0){ 
+
+          //Test
+    fetch(`https://polisen.se/api/events`)
+    .then((response) => {
+      response.text().then((data) => {
+
+
+        cardinfo = JSON.parse(data)
+        cardinfo = cardinfo[Math.floor(Math.random() * 100) + 1]
+        console.log("dawdaw ", cardinfo)
+        cardinfo = cardinfo
+        console.log("first", cardinfo.name.split(','))
+      }, (err) => {
+        console.log("ERROR", err)
+      });
+    })
+
+      setState({ ...state, transition: 0.45, transitioning: false })}
   }, [transition])
 
   const throttleArrows = () => {
@@ -121,6 +144,7 @@ const getWidth = () => window.innerWidth
       translate: 0,
       activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1
     })
+
   }
 
   const smoothTransition = () => {
@@ -141,25 +165,8 @@ const getWidth = () => window.innerWidth
       translate: getWidth()
     })
   }
-  /// TESTING FOR SLIDER !!!!
-  let cardinfo
-  let cardTitle
-  useEffect(() => {
-      //fetchesInputURL based on input
-      fetch(`https://polisen.se/api/events`)
-        .then((response) => {
-          response.text().then((data) => {
-            cardinfo = JSON.parse(data)
-            cardTitle = cardinfo.name
-            console.log("dawdaw ",cardinfo[1].name)
-          }, (err) => {
-            console.log("ERROR", err)
-          });
-        })
-    }, [])
 
-///
-
+console.log("dawdaw ", cardinfo)
 
   return (
     <div css={SliderCSS} ref={sliderRef}>
@@ -169,7 +176,7 @@ const getWidth = () => window.innerWidth
         width={getWidth() * _slides.length}
       >
         {_slides.map((_slide, i) => (
-          <Slide width={getWidth()} key={_slide + i} content={_slide} title={cardTitle} />
+          <Slide width={getWidth()} key={_slide + i} content={_slide} title={cardinfo.name} date={cardinfo.datetime} summary={cardinfo.summary} ap={cardinfo.url} />
         ))}
       </SliderContent>
 
@@ -183,11 +190,12 @@ const getWidth = () => window.innerWidth
 
 const SliderCSS = css`
   position: relative;
-  height: 100vh;
+  height: 65vh;
   width: 100vw;
   margin: 0 auto;
   overflow: hidden;
   white-space: nowrap;
+  color: white;
 `
 
 export default Slider

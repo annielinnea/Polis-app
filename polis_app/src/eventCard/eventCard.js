@@ -5,6 +5,7 @@ import { checkboxList, categoryName } from '../components/Navbar/Checkbox'
 let [input, setInput] = []
 let events = [];
 let query = " "
+
 class EventCard extends React.Component {
   constructor(props) {
     super(props);
@@ -75,7 +76,7 @@ class EventCard extends React.Component {
         >
           <ui>
             {/* //creates cards with map() */}
-            {this.state.events.filter(event => event.type.includes(categoryName)).map(event => (
+            {this.state.events.filter(event => event.type.includes([])).map(event => (
               <ol className="eventOL">
                 <div
                   key={event.id}
