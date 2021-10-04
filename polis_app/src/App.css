@@ -71,8 +71,8 @@ a:link, :visited {
 .sliderEvent{
   padding: 0;
   margin: 0;
-  margin-top: 15%;
-  background-color: #37383a7c;
+  margin-top: 5%;
+  background-color: #00000093;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -151,7 +151,7 @@ hr{
 
 .App-header {
   background-color: #282c34;
-  background-image: url(./components//Img/polis.png);
+  background-image: url(./components/Img/nti_logo.svg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 40vh;

@@ -5,8 +5,7 @@ import { css, jsx } from '@emotion/react'
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 import SliderContent from './SliderContent'
 import Slide from './Slide'
-import Arrow from './Arrow'
-import Dots from './Dots'
+// import Arrow from './Arrow'
 
 const getWidth = () => window.innerWidth
 
@@ -179,18 +178,17 @@ console.log("dawdaw ", cardinfo)
           <Slide width={getWidth()} key={_slide + i} content={_slide} title={cardinfo.name} date={cardinfo.datetime} summary={cardinfo.summary} url={cardinfo.url} />
         ))}
       </SliderContent>
-
+{/* 
       <Arrow direction="left" handleClick={prevSlide} />
-      <Arrow direction="right" handleClick={nextSlide} />
+      <Arrow direction="right" handleClick={nextSlide} /> */}
 
-      <Dots slides={slides} activeSlide={activeSlide} />
     </div>
   )
 }
 
 const SliderCSS = css`
   position: relative;
-  height: 65vh;
+  height: 30vh;
   width: 100vw;
   margin: 0 auto;
   overflow: hidden;

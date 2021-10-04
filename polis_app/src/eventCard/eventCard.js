@@ -76,7 +76,7 @@ class EventCard extends React.Component {
         >
           <ui>
             {/* //creates cards with map() */}
-            {this.state.events.filter(event => event.type.includes([])).map(event => (
+            {this.state.events.filter(event => event.type.includes([categoryName])).map(event => (
               <ol className="eventOL">
                 <div
                   key={event.id}
