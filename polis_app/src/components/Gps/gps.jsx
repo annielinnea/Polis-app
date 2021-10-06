@@ -1,8 +1,3 @@
-import { getDistance } from 'geolib';
-
-
-
-//Get users current position//
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -23,15 +18,4 @@ function error(err) {
 }
 
 
-//Calculate distance between two coordinates//
-function calculateDistance(pos) {
-
-    var crd = pos.coords;
-    var dis = getDistance(
-      { latitude: crd.latitude, longitude: crd.longitude},
-      { latitude: 56.0045345, longitude: 12.3231 }
-    );
-    console.log(`Distance\n\n${dis / 1000} KM`);
-  };
-
-navigator.geolocation.getCurrentPosition(calculateDistance, success, error,  options);
+navigator.geolocation.getCurrentPosition(success, error,  options);

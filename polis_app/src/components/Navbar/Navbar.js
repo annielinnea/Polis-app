@@ -34,6 +34,8 @@ class Navbar extends Component {
                     </li>
                 </ul>
                 <Button>Registrera</Button>
+
+                <Button>Logga in</Button>
             </nav>
         )
     }
