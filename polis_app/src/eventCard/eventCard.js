@@ -57,13 +57,11 @@ class EventCard extends React.Component {
 
 
             console.log("Checkpoint A.2: Status OK")
-            //API Filter
-            console.log("Controll: ", api)
-
             this.setState({
               events: this.state.events = api,
               input: this.state.input = query
             })
+            console.log("GPS: ", api[1].location.gps)
             console.log("EVENTS; ", events)
           }, (err) => {
             console.log("ERROR", err)
