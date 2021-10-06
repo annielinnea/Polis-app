@@ -1,12 +1,6 @@
 
 export const MenuItems = [
     {
-        title: 'Hem',
-        url: '#',
-        cName: 'nav-links'
-    },
- 
-    {
         title: 'Registrera',
         url: '#',
         cName: 'nav-links-mobile'
@@ -14,7 +8,12 @@ export const MenuItems = [
     {
         title: 'Logga in',
         url: '#',
-        cName: 'nav-links'
+        cName: 'nav-links-mobile'
+    },
+    {
+        title: 'Kategori',
+        url: '#',
+        cName: 'nav-links-mobile'
     }
     
     

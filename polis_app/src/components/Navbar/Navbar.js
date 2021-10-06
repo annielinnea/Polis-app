@@ -36,6 +36,8 @@ class Navbar extends Component {
                 <Button>Registrera</Button>
 
                 <Button>Logga in</Button>
+
+                <Button>Kategori</Button>
             </nav>
         )
     }
