@@ -1,12 +1,10 @@
 import React from 'react'
 import globalValues from '../globalValues'
 import { checkboxList, categoryName } from '../components/Navbar/Checkbox'
-import filter from './filter'
+import filtering from './filter'
 
-
-let [input, setInput] = []
 let events = [];
-let query = ''
+let query = 'onLoad'
 
 class EventCard extends React.Component {
   constructor(props) {
@@ -21,15 +19,18 @@ class EventCard extends React.Component {
     // This binding is necessary to make `this` work in the callback
   }
 
-  filterRecount(list){
-    let i = 0
-    list.map(filtering => (
-      filtering[1]  
-    )
-    )
-    
+  filterRecount(el){
+      return el && el.type == categoryName
   }
 
+  getSafe(fn) {
+    try {
+      return fn()
+    } catch (e) {
+      console.log(e)
+      return undefined
+    }
+  }
   //Fetches API data
   componentDidUpdate() {
     
@@ -39,7 +40,6 @@ class EventCard extends React.Component {
 
       //REMOVE THIS FOR DEBUGGING
       console.clear()
-
       query = this.state.input
       //fetchesInputURL based on input
       fetch(`${globalValues.URL}${globalValues.APIlocation}=${query}`)
@@ -50,18 +50,18 @@ class EventCard extends React.Component {
           response.text().then((data) => {
             let api = JSON.parse(data)
 
-            
             // testing
-            // api = api.map(api => api.type == categoryName)
-            //api = api.reduce
+            api = api.slice(0, 50)
+            // api = api && api.find(this.filterRecount)
+            api = api.filter((a) => a.type.includes(categoryName))
 
+            console.log("API_" && api)
 
             console.log("Checkpoint A.2: Status OK")
             this.setState({
               events: this.state.events = api,
               input: this.state.input = query
             })
-            console.log("GPS: ", api[1].location.gps)
             console.log("EVENTS; ", events)
           }, (err) => {
             console.log("ERROR", err)
@@ -80,7 +80,7 @@ class EventCard extends React.Component {
   //creates items/posts of event with properties
   render() {
     return (
-      <div >
+      <div onLoad={this.componentDidUpdate()}>
         <center>
           <input
             placeholder="Enter location...  &#9740;"
