@@ -1,10 +1,12 @@
 import React from 'react'
 import globalValues from '../globalValues'
 import { checkboxList, categoryName } from '../components/Navbar/Checkbox'
+import filter from './filter'
+
 
 let [input, setInput] = []
 let events = [];
-let query = " "
+let query = ''
 
 class EventCard extends React.Component {
   constructor(props) {
@@ -13,14 +15,26 @@ class EventCard extends React.Component {
       events: [],
       input: ''
     }
+    
 
     this.handleChange = this.handleChange.bind(this);
     // This binding is necessary to make `this` work in the callback
   }
 
+  filterRecount(list){
+    let i = 0
+    list.map(filtering => (
+      filtering[1]  
+    )
+    )
+    
+  }
+
   //Fetches API data
   componentDidUpdate() {
+    
     //if statemnet stops infinite loop
+    //Dont know why this works
     if (query !== this.state.input) {
 
       //REMOVE THIS FOR DEBUGGING
@@ -35,6 +49,13 @@ class EventCard extends React.Component {
             "statusText", response.statusText)
           response.text().then((data) => {
             let api = JSON.parse(data)
+
+            
+            // testing
+            // api = api.map(api => api.type == categoryName)
+            //api = api.reduce
+
+
             console.log("Checkpoint A.2: Status OK")
             //API Filter
             console.log("Controll: ", api)
@@ -50,6 +71,7 @@ class EventCard extends React.Component {
         })
     }
   }
+  
 
   //Saves characters on searchbar
   handleChange(event) {
@@ -76,8 +98,8 @@ class EventCard extends React.Component {
         >
           <ui>
             {/* //creates cards with map() */}
-            {this.state.events.filter(event => event.type.includes([categoryName])).map(event => (
-              <ol className="eventOL">
+            {this.state.events.map(event => (
+              <ol className="eventOL" key={event.id}>
                 <div
                   key={event.id}
                   className="event-item"
