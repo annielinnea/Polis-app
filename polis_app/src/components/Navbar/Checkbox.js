@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import category from '../../category.json'
 
-//If viable make this into JSON file
+//If viable make this into JSON file.... DONE (needs optimization)
 export let checkboxList = category
 
 export let categoryName = [];

@@ -5,7 +5,12 @@ import { css, jsx } from '@emotion/react'
 import React, { memo } from 'react'
 
 
-const Slide = ({ content, width, title }) => {
+
+// JUST SEND THE API ALREADY
+const Slide = ({ content, width, title, date, summary, url }) => {
+
+  const titlesplit = String(title).split(',').slice(1)
+  console.log(titlesplit,"title=")
   return (
     <div
       css={css`
@@ -17,10 +22,28 @@ const Slide = ({ content, width, title }) => {
         background-position: center;
       `}
     >
-      <h2 >
-        {title}
-      </h2>
+      <a href={"https://polisen.se/" + url}>
+      <div className="sliderEvent">
+        <ol>
+          <ui>
+            <h2 className="SliderTitle">
+              {titlesplit}
+              <hr ></hr>
+
+            </h2>
+          </ui>
+          <ui>
+            <h2>
+              {date}
+            </h2>
+          </ui>
+          <p>{summary}
+          </p>
+        </ol>
+      </div>
+      </a>
     </div>
+
   )
 }
 
