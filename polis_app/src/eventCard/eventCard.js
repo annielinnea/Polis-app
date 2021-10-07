@@ -2,6 +2,7 @@ import React from 'react'
 import globalValues from '../globalValues'
 import { checkboxList, categoryName } from '../components/Navbar/Checkbox'
 import filtering from './filter'
+import GPS from '../components/Gps/gps'
 
 let events = [];
 let query = 'onLoad'
@@ -102,6 +103,7 @@ class EventCard extends React.Component {
                   key={event.id}
                   className="event-item"
                 >
+                  <GPS apiX={event.api.split(',').slice(1)} apiY={"23"} />
                   <img
                     class="postImg"
                     alt="Polis Scene"
@@ -111,6 +113,7 @@ class EventCard extends React.Component {
                       {event.name.split(',').slice(1)}
                     </a>
                   </p>
+                  <p>{event.location.gps} </p>
                   <p className="event-date">
                     {event.datetime}
                   </p>
