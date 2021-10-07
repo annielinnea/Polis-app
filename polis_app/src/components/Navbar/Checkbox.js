@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import category from '../../category.json'
+import { css, jsx } from '@emotion/react'
 
 //If viable make this into JSON file.... DONE (needs optimization)
 export let checkboxList = category
@@ -11,6 +12,15 @@ console.log("checbklsit_: ", categoryName)
 //create chckbox for each item in checkboxList
 function checkBox() {
     return (
+        <div
+      css={css`
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        
+      `}
+    >
         <form class="checkList">
             {checkboxList.list.map(checkbox => (
                 <React.Fragment>
@@ -29,6 +39,7 @@ function checkBox() {
             ))
             }
         </form>
+        </div>
     )
 
 }

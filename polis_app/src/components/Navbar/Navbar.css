@@ -35,7 +35,7 @@
     grid-template-columns: repeat(5, auto);
     grid-gap: 10px;
     list-style: none;
-    text-align: center;
+    align-content: center;
     width: 70vw;
     /* justify-content: end; dont see the point of this */
     margin-right: 2rem;
