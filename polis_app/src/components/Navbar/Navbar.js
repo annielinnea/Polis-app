@@ -29,15 +29,13 @@ class Navbar extends Component {
                             </li>
                         )
                     })}
-                    <li>
-                        {checkBox()}
-                    </li>
+                    
                 </ul>
                 <Button>Registrera</Button>
 
                 <Button>Logga in</Button>
 
-                <Button>Kategori</Button>
+                <Button onClick={checkBox}>Kategori</Button>
             </nav>
         )
     }
