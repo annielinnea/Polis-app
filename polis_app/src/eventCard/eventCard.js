@@ -4,9 +4,13 @@ import { categoryCTag, categoryName } from '../components/Checkbox'
 import filtering from './filter'
 import CheckBox from '../components/Checkbox'
 
+
+
 let events = [];
 let query = 'onLoad'
 let current = categoryCTag
+
+
 
 class EventCard extends React.Component {
   constructor(props) {
@@ -71,6 +75,8 @@ class EventCard extends React.Component {
   }
 
 
+  
+
   //Saves characters on searchbar
   handleChange(event) {
     console.log("EVENTvalue", event.target.value)
@@ -91,9 +97,12 @@ class EventCard extends React.Component {
   //creates items/posts of event with properties
   render() {
     return (
+
       <div onLoad={this.componentDidUpdate()}>
+
+
         <center>
-          <input
+  <input
             placeholder="Enter location...  &#9740;"
             id="Search"
             className="SearchBar"
