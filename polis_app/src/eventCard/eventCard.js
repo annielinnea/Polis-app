@@ -3,8 +3,12 @@ import globalValues from '../globalValues'
 import { checkboxList, categoryName } from '../components/Navbar/Checkbox'
 import filtering from './filter'
 
+
+
 let events = [];
 let query = 'onLoad'
+
+
 
 class EventCard extends React.Component {
   constructor(props) {
@@ -69,6 +73,8 @@ class EventCard extends React.Component {
         })
     }
   }
+
+
   
 
   //Saves characters on searchbar
@@ -80,9 +86,12 @@ class EventCard extends React.Component {
   //creates items/posts of event with properties
   render() {
     return (
+
       <div onLoad={this.componentDidUpdate()}>
+
+
         <center>
-          <input
+  <input
             placeholder="Enter location...  &#9740;"
             id="Search"
             className="SearchBar"

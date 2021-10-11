@@ -144,3 +144,21 @@ hr{
     color:'white'
 }
 
+.dropdown {
+  width: 400px;
+  font-family: Roboto;
+  src: url(./components/Font/Roboto/Roboto-Black.ttf);
+  margin: 100px auto;
+}
+.dropdown .dropdown-btn{
+  padding: 15px 20px;
+  background: gray;
+  box-shadow: 3px 3px 10px 6px rgba(0,0,0,0.06);
+  font-weight: bold;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
