@@ -98,7 +98,7 @@ let cardinfo = []
   useEffect(() => {
     if (transition === 0){ 
 
-          //Test
+          //Random event from api
     fetch(`https://polisen.se/api/events`)
     .then((response) => {
       response.text().then((data) => {
@@ -135,16 +135,16 @@ let cardinfo = []
     })
   }
 
-  const prevSlide = () => {
-    if(transitioning) return
+  // const prevSlide = () => {
+  //   if(transitioning) return
 
-    setState({
-      ...state,
-      translate: 0,
-      activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1
-    })
+  //   setState({
+  //     ...state,
+  //     translate: 0,
+  //     activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1
+  //   })
 
-  }
+  // }
 
   const smoothTransition = () => {
     let _slides = []
@@ -164,8 +164,6 @@ let cardinfo = []
       translate: getWidth()
     })
   }
-
-console.log("dawdaw ", cardinfo)
 
   return (
     <div css={SliderCSS} ref={sliderRef}>

@@ -1,4 +1,4 @@
-import { checkboxList, categoryName } from '../components/Navbar/Checkbox'
+import { checkboxList, categoryName } from '../components/Checkbox'
 
 const filtered = (filt) => filt === categoryName
 

@@ -1,46 +1,46 @@
 import React from 'react'
 import globalValues from '../globalValues'
-import { checkboxList, categoryName } from '../components/Navbar/Checkbox'
+import { categoryCTag, categoryName } from '../components/Checkbox'
 import filtering from './filter'
+import CheckBox from '../components/Checkbox'
 
 let events = [];
 let query = 'onLoad'
+let current = categoryCTag
 
 class EventCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       events: [],
-      input: ''
+      input: '',
+      currentCTag: ''
     }
-    
+
 
     this.handleChange = this.handleChange.bind(this);
     // This binding is necessary to make `this` work in the callback
   }
 
-  filterRecount(el){
-      return el && el.type == categoryName
-  }
+  // filterRecount(el) {
+  //   return el && el.type == categoryName
+  // }
 
-  getSafe(fn) {
-    try {
-      return fn()
-    } catch (e) {
-      console.log(e)
-      return undefined
-    }
-  }
   //Fetches API data
   componentDidUpdate() {
-    
+
     //if statemnet stops infinite loop
-    //Dont know why this works
+    //Will only update if query & state.input is synced/same
     if (query !== this.state.input) {
 
       //REMOVE THIS FOR DEBUGGING
       console.clear()
+
       query = this.state.input
+      this.setState({
+        currentCTag: this.state.currentCTag = categoryCTag
+      })
+
       //fetchesInputURL based on input
       fetch(`${globalValues.URL}${globalValues.APIlocation}=${query}`)
         .then((response) => {
@@ -50,8 +50,8 @@ class EventCard extends React.Component {
           response.text().then((data) => {
             let api = JSON.parse(data)
 
-            // testing
-            api = api.slice(0, 50)
+            // LIMITER
+            //api = api.slice(0, 50)
             // api = api && api.find(this.filterRecount)
             api = api.filter((a) => a.type.includes(categoryName))
 
@@ -69,12 +69,23 @@ class EventCard extends React.Component {
         })
     }
   }
-  
+
 
   //Saves characters on searchbar
   handleChange(event) {
     console.log("EVENTvalue", event.target.value)
     this.setState({ input: event.target.value });
+  }
+
+  // Not working=?
+  noEvents(count){
+    if(count.lenght <= 1){
+      return(
+        <div className="NO-EVENTS">
+          <h2>No events found!</h2>
+        </div>
+      )
+    }
   }
 
   //creates items/posts of event with properties
@@ -89,12 +100,17 @@ class EventCard extends React.Component {
             type="text"
             value={this.state.input}
             onChange={this.handleChange}
+            style={{"margin-bottom": "0"}}
           />
+          {/* MODAL for kategori */}
+          <CheckBox />
+
+
         </center>
         <div
           className="event-items"
         >
-          <ui>
+          <ui >
             {/* //creates cards with map() */}
             {this.state.events.map(event => (
               <ol className="eventOL" key={event.id}>
@@ -122,6 +138,7 @@ class EventCard extends React.Component {
               </ol>
             ))
             }
+            {this.noEvents(events)}
           </ui>
         </div>
       </div >
@@ -130,3 +147,4 @@ class EventCard extends React.Component {
 }
 
 export default EventCard
+
