@@ -20,6 +20,14 @@ function Bgcolor()
         value:4,
         label: "green"
     },
+    {
+        value:5,
+        label: "purple"
+    },
+    {
+        value:6,
+        label: "native"
+    },
     ];
     var [setbgcolor, ddlvalue] = useState(colors.label);
     var ddlandle = e =>
@@ -30,9 +38,6 @@ function Bgcolor()
         <div>
             <style>{'body {background-color: '+setbgcolor+' ;} '}</style>
             <Select options={colors} onChange={ddlandle}></Select>
-            <center>
-                <b>The background color is: {setbgcolor}</b>
-            </center>
         </div>
     );
 }

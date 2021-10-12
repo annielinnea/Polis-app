@@ -1,5 +1,4 @@
 .NavbarItems {
-    background-color: #1e2b38;
     background-image:url('../Img/topography.svg');
     height: 80px;
     display: flex;
@@ -73,6 +72,7 @@
         position: relative;
     }
     .nav-menu {
+        z-index: 2;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -84,10 +84,10 @@
         transition: all 0.5s ease;
     }
     .nav-menu.active {
-        background: #152238;
+        background-color: #152238;
         left: -40px;
         opacity: 1;
-        transition: all 0.5s ease;
+        transition: all 0.7s ease;
         z-index: 1;
     }
     .nav-links {
@@ -127,10 +127,11 @@
         margin: 2rem auto;
         border-radius: 4px;
         width: 80%;
-        background-color: #222;
+        background-color:#1e2b38;
         text-decoration: none;
         color: #fff;
         font-size: 1.5rem;
+        
     }
     .nav-links-mobile:hover {
         background: #fff;
