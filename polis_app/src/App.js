@@ -4,6 +4,7 @@ import './components/Gps/gps.jsx';
 import Navbar from "./components/Navbar/Navbar";
 import Slider from './components/Slider/Slider';
 import EventCard from './eventCard/eventCard'
+import Bgcolor from './bgcolor';
 
 
 
@@ -27,6 +28,8 @@ function App() {
           <Slider slides={images} autoPlay={5} />
 
         </header>
+        <Bgcolor/>
+
         <div className="PostItems">
 
           <EventCard />
