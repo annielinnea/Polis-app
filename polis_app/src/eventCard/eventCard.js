@@ -30,6 +30,18 @@ class EventCard extends React.Component {
   //   return el && el.type == categoryName
   // }
 
+
+  // Not working=? /troubleshoot later
+  noEvents() {
+    if (events.lenght <= 5) {
+      return (
+        <div className="NO-EVENTS">
+          <h2>No events found!</h2>
+        </div>
+      )
+    }
+  }
+
   //Fetches API data
   componentDidUpdate() {
 
@@ -67,15 +79,17 @@ class EventCard extends React.Component {
               input: this.state.input = query
             })
             console.log("EVENTS; ", events)
+
           }, (err) => {
             console.log("ERROR", err)
           });
         })
+
     }
   }
 
 
-  
+
 
   //Saves characters on searchbar
   handleChange(event) {
@@ -83,16 +97,6 @@ class EventCard extends React.Component {
     this.setState({ input: event.target.value });
   }
 
-  // Not working=?
-  noEvents(count){
-    if(count.lenght <= 1){
-      return(
-        <div className="NO-EVENTS">
-          <h2>No events found!</h2>
-        </div>
-      )
-    }
-  }
 
   //creates items/posts of event with properties
   render() {
@@ -102,14 +106,14 @@ class EventCard extends React.Component {
 
 
         <center>
-  <input
+          <input
             placeholder="Enter location...  &#9740;"
             id="Search"
             className="SearchBar"
             type="text"
             value={this.state.input}
             onChange={this.handleChange}
-            style={{"margin-bottom": "0"}}
+            style={{ "margin-bottom": "0" }}
           />
           {/* MODAL for kategori */}
           <CheckBox />
@@ -147,7 +151,11 @@ class EventCard extends React.Component {
               </ol>
             ))
             }
-            {this.noEvents(events)}
+            {/* Does not trigger=? */}
+            {this.noEvents()}
+            <div className="NO-EVENTS">
+              <h2>No events found!</h2>
+            </div>
           </ui>
         </div>
       </div >

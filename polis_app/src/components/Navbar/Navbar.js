@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems"
 import { Button } from "../Slider/Button"
 import './Navbar.css'
-import checkBox from "./Checkbox";
 
 class Navbar extends Component {
     state = { clicked: false }
@@ -35,7 +34,6 @@ class Navbar extends Component {
 
                 <Button>Logga in</Button>
 
-                <Button onClick={checkBox}>Kategori</Button>
             </nav>
         )
     }

@@ -28,7 +28,7 @@ function CheckBox() {
             <ul style={{padding: 0}}>
             {checkboxList.list.map(checkbox => (
                 <React.Fragment>
-                        <input value={checkbox.Cname} style={{margin: '1px', background: 'black', color: 'white'}} id="input" type="button" onClick={(e) => {
+                        <input value={checkbox.Cname} style={{margin: '1px', background: '#1e2b38', color: 'white'}} id="input" type="button" onClick={(e) => {
                             //true or false value
                             checkbox.value = !checkbox.value
                             categoryName.splice(0, categoryName.length)

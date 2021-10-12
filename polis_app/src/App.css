@@ -161,4 +161,14 @@ hr{
   justify-content: space-between;
 }
 
+.NO-EVENTS{
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.checkList{
+    background-color: #0000008f;
+    
+}
 
