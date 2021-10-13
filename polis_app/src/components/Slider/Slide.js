@@ -24,7 +24,11 @@ const Slide = ({ content, width, title, date, summary, url }) => {
     >
       <a href={"https://polisen.se/" + url}>
       <div className="sliderEvent">
-        <ol>
+        <ol css={css`
+        padding-left: 5%;
+        padding-right: 5%;
+        align-content: center;
+      `}>
           <ui>
             <h2 className="SliderTitle">
               {titlesplit}

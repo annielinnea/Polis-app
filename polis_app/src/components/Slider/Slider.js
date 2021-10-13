@@ -185,12 +185,11 @@ let cardinfo = []
 }
 
 const SliderCSS = css`
-  position: relative;
-  height: 30vh;
+  
+  height: 34vh;
   width: 100vw;
   margin: 0 auto;
   overflow: hidden;
-  white-space: nowrap;
   color: white;
 `
 
