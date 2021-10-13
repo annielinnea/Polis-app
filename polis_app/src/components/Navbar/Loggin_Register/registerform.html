@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registreringssida</title>
+</head>
+<body>
+	<h1>Registrera dig</h1>
+	<form action="taemot-reg.php" method="post">
+		<label>Användarnamn: </label>
+		<input type="text" name="username" pattern="[a-zA-Z0-9]{1,15}" title="DU använder ogiltiga tecken, använd endast a-z,A-Z,0-9" required >
+		<p></p>
+		<label>Lösenord: </label>
+		<input type="password" name="password" required> 
+		<p></p>
+		<input type="submit" name="submit" value="Registrera">
+
+
+	</form>
+
+
+</body>
+</html>

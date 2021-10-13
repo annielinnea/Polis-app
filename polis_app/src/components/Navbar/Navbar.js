@@ -32,8 +32,9 @@ class Navbar extends Component {
                     })}
                     
                 </ul>
-                <Button>Registrera</Button>
-
+                <a href={"#./Loggin_Register/registerform.html"}>
+                <Button  >Registrera</Button>
+                </a>
                 <Button>Logga in</Button>
 
                 
