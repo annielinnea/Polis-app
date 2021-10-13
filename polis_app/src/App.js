@@ -3,7 +3,8 @@ import './App.css';
 import './components/Gps/gps.jsx';
 import Navbar from "./components/Navbar/Navbar";
 import Slider from './components/Slider/Slider';
-import EventCard from './eventCard/eventCard'
+import EventCard from './eventCard/eventCard';
+import Bgcolor from './bgcolor';
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <div className="App">
 
         <Navbar />
+        <Bgcolor />
         <header>
           <Slider slides={images} autoPlay={5} />
 
