@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Select from 'react-select'
 
+
 function Bgcolor()
 {
     var colors = [
@@ -36,7 +37,7 @@ function Bgcolor()
     }
     return(
         <div>
-            <style>{'body {background-color: '+setbgcolor+' ;} '}</style>
+            <style>{'.container {background-color: '+setbgcolor+' ;} '}</style>
             <Select options={colors} onChange={ddlandle}></Select>
         </div>
     );
