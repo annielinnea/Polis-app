@@ -185,15 +185,15 @@ let cardinfo = []
 }
 
 const SliderCSS = css`
+  
   position: relative;
   align-content: center;
   height: 30vh;
   with: 150px;
   margin: 0 auto;
   overflow: hidden;
-  white-space: nowrap;
   color: white;
-  
+ 
 `
 
 export default Slider

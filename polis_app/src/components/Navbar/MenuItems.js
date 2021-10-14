@@ -2,7 +2,7 @@
 export const MenuItems = [
     {
         title: 'Registrera',
-        url: '#',
+        url: 'file:///polis_app/src/components/Loggin_Register/registerform.html',
         cName: 'nav-links-mobile'
     },
     {
