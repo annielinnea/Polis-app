@@ -17,9 +17,9 @@ const Slide = ({ content, width, title, date, summary, url }) => {
         height: 100%;
         width: ${width}px;
         background-image: url('${content}');
-        background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-size: cover;
+        
       `}
     >
       <a href={"https://polisen.se/" + url}>

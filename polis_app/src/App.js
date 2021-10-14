@@ -21,21 +21,30 @@ function App() {
 
     <React.Fragment>
 
-      <div className="App">
+      <center>
 
-        <Navbar />
-        <Bgcolor />
-        <header>
-          <Slider slides={images} autoPlay={5} />
+        <div className="container">
 
-        </header>
-        <div className="PostItems">
+          <div className="App">
 
-          <EventCard />
+            <Navbar />
+            <Bgcolor />
+            <header>
 
+              <Slider slides={images} autoPlay={5} />
+
+            </header>
+            <div className="PostItems">
+
+              <EventCard />
+
+            </div>
+          </div>
         </div>
-      </div>
+      </center>
+
     </React.Fragment>
+
   );
 }
 

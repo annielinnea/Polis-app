@@ -1,8 +1,17 @@
+
 body{
-  -webkit-text-stroke: 0.1px black;
-  font-family: Roboto;
+ background: rgb(0, 0, 0, 0.6);
+ background-image:url('./components/Img/topography.svg');
+
+}
+
+
+.container{
+  
   background-color: #1e2b38;
+  font-family: Roboto;
   background-image:url('./components/Img/topography.svg');
+  width: 75%;
 }
 
 /* Searchbar properties */
@@ -37,6 +46,8 @@ body{
 .postImg{
   background-image: url(./components/Img/stockImg.jpg);
   background-size: cover;
+ 
+
 }
 
 a:link, :visited {
