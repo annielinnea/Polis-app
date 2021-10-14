@@ -14,6 +14,7 @@ const Slide = ({ content, width, title, date, summary, url }) => {
   return (
     <div
       css={css`
+        
         height: 100%;
         width: ${width}px;
         background-image: url('${content}');
@@ -25,6 +26,7 @@ const Slide = ({ content, width, title, date, summary, url }) => {
       <a href={"https://polisen.se/" + url}>
       <div className="sliderEvent">
         <ol css={css`
+        text-align: center;
         padding-left: 5%;
         padding-right: 5%;
         align-content: center;

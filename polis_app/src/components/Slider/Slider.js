@@ -135,16 +135,16 @@ let cardinfo = []
     })
   }
 
-  // const prevSlide = () => {
-  //   if(transitioning) return
+  //  const prevSlide = () => {
+  //    if(transitioning) return
 
-  //   setState({
-  //     ...state,
-  //     translate: 0,
-  //     activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1
+  //    setState({
+  //      ...state,
+  //      translate: 0,
+  //      activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1
   //   })
 
-  // }
+  //  }
 
   const smoothTransition = () => {
     let _slides = []
@@ -185,7 +185,7 @@ let cardinfo = []
 }
 
 const SliderCSS = css`
-  
+
   position: relative;
   align-content: center;
   height: 30vh;

@@ -3,6 +3,7 @@ import globalValues from '../globalValues'
 import { categoryCTag, categoryName } from '../components/Checkbox'
 import filtering from './filter'
 import CheckBox from '../components/Checkbox'
+import { css} from '@emotion/react'
 
 
 
@@ -127,7 +128,7 @@ class EventCard extends React.Component {
                   key={event.id}
                   className="event-item"
                 >
-                  <img
+                  <img 
                     class="postImg"
                     alt="Polis Scene"
                   ></img>
@@ -154,6 +155,7 @@ class EventCard extends React.Component {
     )
   }
 }
+
 
 export default EventCard
 
