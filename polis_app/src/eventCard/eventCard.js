@@ -59,15 +59,11 @@ class EventCard extends React.Component {
             //api = api.slice(0, 50)
             // api = api && api.find(this.filterRecount)
             api = api.filter((a) => a.type.includes(categoryName))
-
-            console.log("API_" && api)
-
             console.log("Checkpoint A.2: Status OK")
             this.setState({
               events: this.state.events = api,
               input: this.state.input = query
             })
-            console.log("EVENTS; ", events)
           }, (err) => {
             console.log("ERROR", err)
           });
@@ -80,13 +76,12 @@ class EventCard extends React.Component {
 
   //Saves characters on searchbar
   handleChange(event) {
-    console.log("EVENTvalue", event.target.value)
     this.setState({ input: event.target.value });
   }
 
   // Not working=?
   noEvents(count){
-    if(count.lenght <= 1){
+    if(count.lenght <= 3){
       return(
         <div className="NO-EVENTS">
           <h2>No events found!</h2>
@@ -148,7 +143,9 @@ class EventCard extends React.Component {
               </ol>
             ))
             }
-            {this.noEvents(events)}
+            <div className="NO-EVENTS">
+          <h2>No events found!</h2>
+        </div>
           </ui>
         </div>
       </div >

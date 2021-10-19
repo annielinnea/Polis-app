@@ -84,15 +84,17 @@ a:link, :visited {
   padding: 0;
   margin: 0;
   margin-top: 5%;
+  margin-bottom: 5%;
   background-color: #00000093;
   display: flex;
   
   width: 100%;
-  height: 85%;
+  height: 65%;
   text-shadow: 5px 5px rgba(0, 0, 0, 0.657);
   word-wrap: break-word;
 
   text-align: center;
+  
 }
 
 .SliderTitle{
@@ -133,14 +135,14 @@ hr{
   padding-left: 20px;
   padding-top: 1px;
   padding-bottom: 1px;
-  height: 130px;
+  height: 145px;
 }
 
 /* properties for Img in items */
 .postImg{
   filter: blur(1.5px);
   float: right;
-  width: 80px;
+  width: 20%;
   height: 100%;
   
   border:none;
@@ -149,9 +151,18 @@ hr{
   border-bottom-right-radius: 20px;
 }
 
+.NO-EVENTS{
+  text-align: center;
+  color: white;
+  box-shadow: 3px 3px 10px 6px rgba(0,0,0,0.06); /*??????? Does not appear*/
+
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.657);
+  padding-bottom: 1%;
+}
+
 
 .event-info{
-    margin-top: '40px';
+    margin-top: '40px'; 
     height:'160px';
     width: '100%';
     background-color:'#282c34';
@@ -186,5 +197,9 @@ hr{
 @media(max-width: 1024px) {
   .container {
     width: 100%;
+  }
+  .sliderEvent{
+    height: 75%;
+    padding-bottom: 8%;
   }
 }

@@ -20,8 +20,6 @@ function CheckBox() {
         flex-direction: column;
         align-content: center;
         text-align: center;
-        
-        
       `}
     >
         <form class="checkList">
@@ -34,14 +32,19 @@ function CheckBox() {
                             categoryName.splice(0, categoryName.length)
                             categoryName.push(checkbox.Cname)
                             categoryCTag = categoryName         
-                            console.log(checkboxList)
-                            console.log("checbklsit_: ", categoryName)
+                                // console.log(checkboxList) //FOR DEBUGGING
+                                // console.log("checbklsit_: ", categoryName)//FOR DEBUGGING
                         }}
                         />
                         {/* <label>{checkbox.Cname}</label> */}
                 </React.Fragment>
             ))
             }
+            <input value="Clear" style={{margin: '1px', background: 'black', color: 'white'}} id="input" type="button" onClick={(e) => {
+                            categoryName = []
+                            categoryCTag = categoryName
+                        }}
+                        />
             </ul>
         </form>
         </div>

@@ -28,7 +28,7 @@ function App() {
           <div className="App">
 
             <Navbar />
-            <Bgcolor />
+            
             <header>
 
               <Slider slides={images} autoPlay={5} />

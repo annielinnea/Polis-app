@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems"
 import { Button } from "../Slider/Button"
 import './Navbar.css'
+import Bgcolor from '../../bgcolor';
 
 class Navbar extends Component {
     state = { clicked: false }
@@ -13,7 +14,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">Polisen<img id="logo"></img></h1>
+                <h1 className="navbar-logo">Polisen</h1>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
@@ -31,11 +32,7 @@ class Navbar extends Component {
                     })}
                     
                 </ul>
-                <a href={"#./Loggin_Register/registerform.html"}>
-                <Button  >Registrera</Button>
-                </a>
-                <Button>Logga in</Button>
-
+                
                 
             </nav>
         )

@@ -106,7 +106,6 @@ let cardinfo = []
 
         cardinfo = JSON.parse(data)
         cardinfo = cardinfo[Math.floor(Math.random() * 100) + 1]
-        console.log("dawdaw ", cardinfo)
         cardinfo = cardinfo
         console.log("first", cardinfo.name.split(','))
       }, (err) => {
@@ -189,7 +188,7 @@ const SliderCSS = css`
   position: relative;
   align-content: center;
   height: 30vh;
-  with: 150px;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
   color: white;
