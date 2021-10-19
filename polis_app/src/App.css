@@ -23,14 +23,14 @@ body{
   border-radius: 5px;
   padding: 10px 5px;
 
-  margin-bottom: 30px;
-  margin-top: 40px;
-  margin-left: 5px;
-  margin-right: 5px;
-
   vertical-align: middle;
   width:  80%;
   text-align: center;
+  
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .eventOL{
@@ -187,12 +187,14 @@ hr{
 }
 
 .checkList{
-  margin-top: 5px;
+  margin-top: 20px;
   padding-top: 1px;
   
   padding-bottom: 1px;
   background-color: #000000c9;
 }
+
+
 
 @media(max-width: 1024px) {
   .container {
