@@ -10,6 +10,7 @@ import React, { memo } from 'react'
 const Slide = ({ content, width, title, date, summary, url }) => {
 
   const titlesplit = String(title).split(',').slice(1)
+  console.log(titlesplit,"title=")
   return (
     <div
       css={css`
@@ -20,19 +21,15 @@ const Slide = ({ content, width, title, date, summary, url }) => {
         background-repeat: no-repeat;
         background-size: cover;
         
+        
       `}
     >
       <a href={"https://polisen.se/" + url}>
       <div className="sliderEvent">
         <ol css={css`
         text-align: center;
-        padding-left: 28%;
+        margin: auto;
         align-content: center;
-        
-        @media(max-width: 1024px) {
-          padding-left: 15px;
-
-        }
       `}>
           <ui>
             <h2 className="SliderTitle">
